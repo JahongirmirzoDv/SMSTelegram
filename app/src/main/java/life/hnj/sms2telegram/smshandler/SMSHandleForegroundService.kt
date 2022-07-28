@@ -8,13 +8,13 @@ import android.content.IntentFilter
 import android.graphics.Color
 import android.os.Build
 import android.os.IBinder
-import android.os.SystemClock
 import android.provider.Telephony
 import android.util.Log
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import life.hnj.sms2telegram.MainActivity
+import java.util.*
 
 
 class SMSHandleForegroundService : Service() {
@@ -46,7 +46,12 @@ class SMSHandleForegroundService : Service() {
     private fun createNotification(): Notification {
         val input = "SMS2Telegram running in the background"
         val notificationIntent = Intent(applicationContext, MainActivity::class.java)
-        val pendingIntent = PendingIntent.getActivity(applicationContext, 0, notificationIntent,PendingIntent.FLAG_IMMUTABLE)
+        val pendingIntent = PendingIntent.getActivity(
+            applicationContext,
+            0,
+            notificationIntent,
+            PendingIntent.FLAG_IMMUTABLE
+        )
         val channelId = createNotificationChannel("SMS2TELEGRAM", "SMS2TelegramService")
         return NotificationCompat.Builder(applicationContext, channelId)
             .setContentTitle("SMS2Telegram Service")
@@ -55,10 +60,6 @@ class SMSHandleForegroundService : Service() {
             .build()
     }
 
-
-    override fun onDestroy() {
-        super.onDestroy()
-    }
 
     @RequiresApi(Build.VERSION_CODES.O)
     private fun createNotificationChannel(channelId: String, channelName: String): String {
@@ -73,18 +74,36 @@ class SMSHandleForegroundService : Service() {
         return channelId
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
+    override fun onDestroy() {
+        super.onDestroy()
+        Toast.makeText(applicationContext, "Service Task destroyed", Toast.LENGTH_LONG).show()
+        val myIntent = Intent(applicationContext, SMSHandleForegroundService::class.java)
+        val pendingIntent = PendingIntent.getService(applicationContext, 0, myIntent, 0)
+        val alarmManager1 = getSystemService(ALARM_SERVICE) as AlarmManager
+        val calendar: Calendar = Calendar.getInstance()
+        calendar.setTimeInMillis(System.currentTimeMillis())
+        calendar.add(Calendar.MILLISECOND, 10)
+        alarmManager1[AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis()] = pendingIntent
+        Toast.makeText(applicationContext, "Start Alarm", Toast.LENGTH_SHORT).show()
+        val notification = createNotification()
+        startForeground(1, notification)
+    }
+
+
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onTaskRemoved(rootIntent: Intent?) {
-        val restartServiceTask = Intent(applicationContext, this.javaClass)
-        restartServiceTask.setPackage(packageName)
-        val restartPendingIntent = PendingIntent.getService(
-            applicationContext,
-            1,
-            restartServiceTask,
-            PendingIntent.FLAG_ONE_SHOT
-        )
-        val myAlarmService = applicationContext.getSystemService(ALARM_SERVICE) as AlarmManager
-        myAlarmService[AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime() + 10] =
-            restartPendingIntent
         super.onTaskRemoved(rootIntent)
+        val myIntent = Intent(applicationContext, SMSHandleForegroundService::class.java)
+        val pendingIntent = PendingIntent.getService(applicationContext, 0, myIntent, 0)
+        val alarmManager1 = getSystemService(ALARM_SERVICE) as AlarmManager
+        val calendar: Calendar = Calendar.getInstance()
+        calendar.setTimeInMillis(System.currentTimeMillis())
+        calendar.add(Calendar.MILLISECOND, 10)
+        alarmManager1[AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis()] = pendingIntent
+        Toast.makeText(applicationContext, "Start Alarm", Toast.LENGTH_SHORT).show()
+
+        val notification = createNotification()
+        startForeground(1, notification)
     }
 }

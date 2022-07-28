@@ -1,9 +1,11 @@
 package life.hnj.sms2telegram
 
 import android.Manifest
+import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -13,7 +15,6 @@ import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.SwitchCompat
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.datastore.core.DataStore
@@ -23,11 +24,20 @@ import androidx.datastore.preferences.preferencesDataStore
 import kotlinx.coroutines.runBlocking
 import life.hnj.sms2telegram.smshandler.SMSHandleForegroundService
 
+
 val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
 class MainActivity : AppCompatActivity() {
     val TAG = "MainActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
+        if (Build.BRAND.equals("Xiaomi", ignoreCase = true)) {
+            val intent1 = Intent()
+            intent1.component = ComponentName(
+                "com.miui.securitycenter",
+                "com.miui.permcenter.autostart.AutoStartManagementActivity"
+            )
+            startActivity(intent1)
+        }
         val requestPermissionLauncher =
             registerForActivityResult(
                 ActivityResultContracts.RequestPermission()
@@ -53,7 +63,7 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(findViewById(R.id.action_bar))
+//        setSupportActionBar(findViewById(R.id.action_bar))
 
         val sync2TgEnabledKey = sync2TelegramKey(resources)
         val sync2TgEnabled = getBooleanVal(applicationContext, sync2TgEnabledKey)
