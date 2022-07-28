@@ -1,0 +1,2 @@
+life/hnj/sms2telegram/BuildConfig.java
+ life.hnj.sms2telegram.BuildConfig

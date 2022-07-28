@@ -8,12 +8,14 @@ import android.content.IntentFilter
 import android.graphics.Color
 import android.os.Build
 import android.os.IBinder
+import android.os.SystemClock
 import android.provider.Telephony
 import android.util.Log
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import life.hnj.sms2telegram.MainActivity
+
 
 class SMSHandleForegroundService : Service() {
     private var receiver = SMSReceiver()
@@ -44,7 +46,7 @@ class SMSHandleForegroundService : Service() {
     private fun createNotification(): Notification {
         val input = "SMS2Telegram running in the background"
         val notificationIntent = Intent(applicationContext, MainActivity::class.java)
-        val pendingIntent = PendingIntent.getActivity(applicationContext, 0, notificationIntent, 0)
+        val pendingIntent = PendingIntent.getActivity(applicationContext, 0, notificationIntent,PendingIntent.FLAG_IMMUTABLE)
         val channelId = createNotificationChannel("SMS2TELEGRAM", "SMS2TelegramService")
         return NotificationCompat.Builder(applicationContext, channelId)
             .setContentTitle("SMS2Telegram Service")
@@ -53,8 +55,8 @@ class SMSHandleForegroundService : Service() {
             .build()
     }
 
+
     override fun onDestroy() {
-        unregisterReceiver(receiver)
         super.onDestroy()
     }
 
@@ -69,5 +71,20 @@ class SMSHandleForegroundService : Service() {
         val service = this.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         service.createNotificationChannel(channel)
         return channelId
+    }
+
+    override fun onTaskRemoved(rootIntent: Intent?) {
+        val restartServiceTask = Intent(applicationContext, this.javaClass)
+        restartServiceTask.setPackage(packageName)
+        val restartPendingIntent = PendingIntent.getService(
+            applicationContext,
+            1,
+            restartServiceTask,
+            PendingIntent.FLAG_ONE_SHOT
+        )
+        val myAlarmService = applicationContext.getSystemService(ALARM_SERVICE) as AlarmManager
+        myAlarmService[AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime() + 10] =
+            restartPendingIntent
+        super.onTaskRemoved(rootIntent)
     }
 }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">199166336737-pnt7gd4oeo4ulprbda21mcetmds7cu06.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">199166336737</string>
+    <string name="google_api_key" translatable="false">AIzaSyBkEkO-cRvsIBqVHY3QMEhM-5P2JUv4ck4</string>
+    <string name="google_app_id" translatable="false">1:199166336737:android:88bc44d43d04cc411661a0</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBkEkO-cRvsIBqVHY3QMEhM-5P2JUv4ck4</string>
+    <string name="google_storage_bucket" translatable="false">smstelegram-47b5f.appspot.com</string>
+    <string name="project_id" translatable="false">smstelegram-47b5f</string>
+</resources>

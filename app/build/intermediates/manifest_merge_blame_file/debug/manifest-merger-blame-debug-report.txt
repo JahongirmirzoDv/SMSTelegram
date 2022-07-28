@@ -1,0 +1,418 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="life.hnj.sms2telegram"
+4    android:versionCode="1"
+5    android:versionName="1.2" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+11-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:5:5-79
+11-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:5:22-76
+12    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+12-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:6:5-77
+12-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:6:22-74
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:7:5-67
+13-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:7:22-64
+14    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+14-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:8:5-70
+14-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:8:22-67
+15    <uses-permission android:name="android.permission.WAKE_LOCK" />
+15-->[com.google.android.gms:play-services-measurement-api:20.1.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/7d2268a2cb31a617be72d74523ccb715/play-services-measurement-api-20.1.1/AndroidManifest.xml:24:5-68
+15-->[com.google.android.gms:play-services-measurement-api:20.1.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/7d2268a2cb31a617be72d74523ccb715/play-services-measurement-api-20.1.1/AndroidManifest.xml:24:22-65
+16    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+16-->[com.google.android.gms:play-services-measurement-api:20.1.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/7d2268a2cb31a617be72d74523ccb715/play-services-measurement-api-20.1.1/AndroidManifest.xml:25:5-79
+16-->[com.google.android.gms:play-services-measurement-api:20.1.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/7d2268a2cb31a617be72d74523ccb715/play-services-measurement-api-20.1.1/AndroidManifest.xml:25:22-76
+17    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+17-->[com.google.android.gms:play-services-measurement:20.1.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/5f0af524a58ab1ea33769cf1666f701e/play-services-measurement-20.1.1/AndroidManifest.xml:26:5-110
+17-->[com.google.android.gms:play-services-measurement:20.1.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/5f0af524a58ab1ea33769cf1666f701e/play-services-measurement-20.1.1/AndroidManifest.xml:26:22-107
+18    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+18-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:27:5-81
+18-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:27:22-78
+19
+20    <application
+20-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:11:5-46:19
+21        android:allowBackup="false"
+21-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:12:9-36
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.6.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/4f72fbe8acb1d56638529bd60a4353fa/core-1.6.0/AndroidManifest.xml:24:18-86
+23        android:debuggable="true"
+24        android:icon="@mipmap/ic_launcher"
+24-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:13:9-43
+25        android:label="@string/app_name"
+25-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:14:9-41
+26        android:roundIcon="@mipmap/ic_launcher_round"
+26-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:15:9-54
+27        android:supportsRtl="true"
+27-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:16:9-35
+28        android:theme="@style/Theme.SMS2Telegram" >
+28-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:17:9-50
+29        <service
+29-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:18:9-22:43
+30            android:name="life.hnj.sms2telegram.smshandler.SMSHandleForegroundService"
+30-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:19:13-66
+31            android:enabled="true"
+31-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:20:13-35
+32            android:exported="true"
+32-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:21:13-36
+33            android:stopWithTask="false" />
+33-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:22:13-41
+34
+35        <activity
+35-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:24:9-33:20
+36            android:name="life.hnj.sms2telegram.MainActivity"
+36-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:25:13-41
+37            android:exported="true"
+37-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:26:13-36
+38            android:label="@string/app_name" >
+38-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:27:13-45
+39            <intent-filter>
+39-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:28:13-32:29
+40                <action android:name="android.intent.action.MAIN" />
+40-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:29:17-69
+40-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:29:25-66
+41
+42                <category android:name="android.intent.category.LAUNCHER" />
+42-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:31:17-77
+42-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:31:27-74
+43            </intent-filter>
+44        </activity>
+45        <activity
+45-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:34:9-45:20
+46            android:name="life.hnj.sms2telegram.SettingsActivity"
+46-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:35:13-45
+47            android:exported="true"
+47-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:36:13-36
+48            android:parentActivityName="life.hnj.sms2telegram.MainActivity" >
+48-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:37:13-55
+49            <intent-filter>
+49-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:38:13-40:29
+50                <category android:name="android.intent.category.PREFERENCE" />
+50-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:39:17-79
+50-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:39:27-76
+51            </intent-filter>
+52
+53            <meta-data
+53-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:42:13-44:70
+54                android:name="android.support.PARENT_ACTIVITY"
+54-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:43:17-63
+55                android:value="life.hnj.sms2telegram.MainActivity" />
+55-->/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/src/main/AndroidManifest.xml:44:17-67
+56        </activity>
+57
+58        <service
+58-->[com.google.firebase:firebase-crashlytics:18.2.9] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/204069a7662118b63cbb7a705e750094/firebase-crashlytics-18.2.9/AndroidManifest.xml:15:9-21:19
+59            android:name="com.google.firebase.components.ComponentDiscoveryService"
+59-->[com.google.firebase:firebase-crashlytics:18.2.9] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/204069a7662118b63cbb7a705e750094/firebase-crashlytics-18.2.9/AndroidManifest.xml:16:13-84
+60            android:directBootAware="true"
+60-->[com.google.firebase:firebase-common:20.1.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/a6de9a22050e2336fab42b152f7d8e25/firebase-common-20.1.0/AndroidManifest.xml:35:13-43
+61            android:exported="false" >
+61-->[com.google.firebase:firebase-crashlytics:18.2.9] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/204069a7662118b63cbb7a705e750094/firebase-crashlytics-18.2.9/AndroidManifest.xml:17:13-37
+62            <meta-data
+62-->[com.google.firebase:firebase-crashlytics:18.2.9] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/204069a7662118b63cbb7a705e750094/firebase-crashlytics-18.2.9/AndroidManifest.xml:18:13-20:85
+63                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+63-->[com.google.firebase:firebase-crashlytics:18.2.9] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/204069a7662118b63cbb7a705e750094/firebase-crashlytics-18.2.9/AndroidManifest.xml:19:17-115
+64                android:value="com.google.firebase.components.ComponentRegistrar" />
+64-->[com.google.firebase:firebase-crashlytics:18.2.9] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/204069a7662118b63cbb7a705e750094/firebase-crashlytics-18.2.9/AndroidManifest.xml:20:17-82
+65            <meta-data
+65-->[com.google.android.gms:play-services-measurement-api:20.1.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/7d2268a2cb31a617be72d74523ccb715/play-services-measurement-api-20.1.1/AndroidManifest.xml:31:13-33:85
+66                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+66-->[com.google.android.gms:play-services-measurement-api:20.1.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/7d2268a2cb31a617be72d74523ccb715/play-services-measurement-api-20.1.1/AndroidManifest.xml:32:17-139
+67                android:value="com.google.firebase.components.ComponentRegistrar" />
+67-->[com.google.android.gms:play-services-measurement-api:20.1.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/7d2268a2cb31a617be72d74523ccb715/play-services-measurement-api-20.1.1/AndroidManifest.xml:33:17-82
+68            <meta-data
+68-->[com.google.firebase:firebase-installations:17.0.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/3e1a76f70958ab64fea41987d12c7c56/firebase-installations-17.0.1/AndroidManifest.xml:18:13-20:85
+69                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+69-->[com.google.firebase:firebase-installations:17.0.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/3e1a76f70958ab64fea41987d12c7c56/firebase-installations-17.0.1/AndroidManifest.xml:19:17-127
+70                android:value="com.google.firebase.components.ComponentRegistrar" />
+70-->[com.google.firebase:firebase-installations:17.0.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/3e1a76f70958ab64fea41987d12c7c56/firebase-installations-17.0.1/AndroidManifest.xml:20:17-82
+71        </service>
+72
+73        <provider
+73-->[com.google.firebase:firebase-common:20.1.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/a6de9a22050e2336fab42b152f7d8e25/firebase-common-20.1.0/AndroidManifest.xml:26:9-31:39
+74            android:name="com.google.firebase.provider.FirebaseInitProvider"
+74-->[com.google.firebase:firebase-common:20.1.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/a6de9a22050e2336fab42b152f7d8e25/firebase-common-20.1.0/AndroidManifest.xml:27:13-77
+75            android:authorities="life.hnj.sms2telegram.firebaseinitprovider"
+75-->[com.google.firebase:firebase-common:20.1.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/a6de9a22050e2336fab42b152f7d8e25/firebase-common-20.1.0/AndroidManifest.xml:28:13-72
+76            android:directBootAware="true"
+76-->[com.google.firebase:firebase-common:20.1.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/a6de9a22050e2336fab42b152f7d8e25/firebase-common-20.1.0/AndroidManifest.xml:29:13-43
+77            android:exported="false"
+77-->[com.google.firebase:firebase-common:20.1.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/a6de9a22050e2336fab42b152f7d8e25/firebase-common-20.1.0/AndroidManifest.xml:30:13-37
+78            android:initOrder="100" />
+78-->[com.google.firebase:firebase-common:20.1.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/a6de9a22050e2336fab42b152f7d8e25/firebase-common-20.1.0/AndroidManifest.xml:31:13-36
+79
+80        <receiver
+80-->[com.google.android.gms:play-services-measurement:20.1.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/5f0af524a58ab1ea33769cf1666f701e/play-services-measurement-20.1.1/AndroidManifest.xml:29:9-33:20
+81            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+81-->[com.google.android.gms:play-services-measurement:20.1.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/5f0af524a58ab1ea33769cf1666f701e/play-services-measurement-20.1.1/AndroidManifest.xml:30:13-85
+82            android:enabled="true"
+82-->[com.google.android.gms:play-services-measurement:20.1.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/5f0af524a58ab1ea33769cf1666f701e/play-services-measurement-20.1.1/AndroidManifest.xml:31:13-35
+83            android:exported="false" >
+83-->[com.google.android.gms:play-services-measurement:20.1.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/5f0af524a58ab1ea33769cf1666f701e/play-services-measurement-20.1.1/AndroidManifest.xml:32:13-37
+84        </receiver>
+85
+86        <service
+86-->[com.google.android.gms:play-services-measurement:20.1.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/5f0af524a58ab1ea33769cf1666f701e/play-services-measurement-20.1.1/AndroidManifest.xml:35:9-38:40
+87            android:name="com.google.android.gms.measurement.AppMeasurementService"
+87-->[com.google.android.gms:play-services-measurement:20.1.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/5f0af524a58ab1ea33769cf1666f701e/play-services-measurement-20.1.1/AndroidManifest.xml:36:13-84
+88            android:enabled="true"
+88-->[com.google.android.gms:play-services-measurement:20.1.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/5f0af524a58ab1ea33769cf1666f701e/play-services-measurement-20.1.1/AndroidManifest.xml:37:13-35
+89            android:exported="false" />
+89-->[com.google.android.gms:play-services-measurement:20.1.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/5f0af524a58ab1ea33769cf1666f701e/play-services-measurement-20.1.1/AndroidManifest.xml:38:13-37
+90        <service
+90-->[com.google.android.gms:play-services-measurement:20.1.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/5f0af524a58ab1ea33769cf1666f701e/play-services-measurement-20.1.1/AndroidManifest.xml:39:9-43:72
+91            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+91-->[com.google.android.gms:play-services-measurement:20.1.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/5f0af524a58ab1ea33769cf1666f701e/play-services-measurement-20.1.1/AndroidManifest.xml:40:13-87
+92            android:enabled="true"
+92-->[com.google.android.gms:play-services-measurement:20.1.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/5f0af524a58ab1ea33769cf1666f701e/play-services-measurement-20.1.1/AndroidManifest.xml:41:13-35
+93            android:exported="false"
+93-->[com.google.android.gms:play-services-measurement:20.1.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/5f0af524a58ab1ea33769cf1666f701e/play-services-measurement-20.1.1/AndroidManifest.xml:42:13-37
+94            android:permission="android.permission.BIND_JOB_SERVICE" />
+94-->[com.google.android.gms:play-services-measurement:20.1.1] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/5f0af524a58ab1ea33769cf1666f701e/play-services-measurement-20.1.1/AndroidManifest.xml:43:13-69
+95
+96        <meta-data
+96-->[com.google.android.gms:play-services-basement:18.0.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/64f677000bae32d1e8abf9e07118b906/play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+97            android:name="com.google.android.gms.version"
+97-->[com.google.android.gms:play-services-basement:18.0.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/64f677000bae32d1e8abf9e07118b906/play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+98            android:value="@integer/google_play_services_version" />
+98-->[com.google.android.gms:play-services-basement:18.0.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/64f677000bae32d1e8abf9e07118b906/play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
+99
+100        <provider
+100-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:31:9-37:35
+101            android:name="androidx.work.impl.WorkManagerInitializer"
+101-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:32:13-69
+102            android:authorities="life.hnj.sms2telegram.workmanager-init"
+102-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:33:13-68
+103            android:directBootAware="false"
+103-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:34:13-44
+104            android:exported="false"
+104-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:35:13-37
+105            android:multiprocess="true" />
+105-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:36:13-40
+106
+107        <service
+107-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:39:9-44:35
+108            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+108-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:40:13-88
+109            android:directBootAware="false"
+109-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:41:13-44
+110            android:enabled="@bool/enable_system_alarm_service_default"
+110-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:42:13-72
+111            android:exported="false" />
+111-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:43:13-37
+112        <service
+112-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:45:9-51:35
+113            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+113-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:46:13-84
+114            android:directBootAware="false"
+114-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:47:13-44
+115            android:enabled="@bool/enable_system_job_service_default"
+115-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:48:13-70
+116            android:exported="true"
+116-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:49:13-36
+117            android:permission="android.permission.BIND_JOB_SERVICE" />
+117-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:50:13-69
+118        <service
+118-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:52:9-57:35
+119            android:name="androidx.work.impl.foreground.SystemForegroundService"
+119-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:53:13-81
+120            android:directBootAware="false"
+120-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:54:13-44
+121            android:enabled="@bool/enable_system_foreground_service_default"
+121-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:55:13-77
+122            android:exported="false" />
+122-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:56:13-37
+123
+124        <receiver
+124-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:59:9-64:35
+125            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+125-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:60:13-88
+126            android:directBootAware="false"
+126-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:61:13-44
+127            android:enabled="true"
+127-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:62:13-35
+128            android:exported="false" />
+128-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:63:13-37
+129        <receiver
+129-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:65:9-75:20
+130            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+130-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:66:13-106
+131            android:directBootAware="false"
+131-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:67:13-44
+132            android:enabled="false"
+132-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:68:13-36
+133            android:exported="false" >
+133-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:69:13-37
+134            <intent-filter>
+134-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:71:13-74:29
+135                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+135-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:72:17-87
+135-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:72:25-84
+136                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+136-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:73:17-90
+136-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:73:25-87
+137            </intent-filter>
+138        </receiver>
+139        <receiver
+139-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:76:9-86:20
+140            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+140-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:77:13-104
+141            android:directBootAware="false"
+141-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:78:13-44
+142            android:enabled="false"
+142-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:79:13-36
+143            android:exported="false" >
+143-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:80:13-37
+144            <intent-filter>
+144-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:82:13-85:29
+145                <action android:name="android.intent.action.BATTERY_OKAY" />
+145-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:83:17-77
+145-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:83:25-74
+146                <action android:name="android.intent.action.BATTERY_LOW" />
+146-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:84:17-76
+146-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:84:25-73
+147            </intent-filter>
+148        </receiver>
+149        <receiver
+149-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:87:9-97:20
+150            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+150-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:88:13-104
+151            android:directBootAware="false"
+151-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:89:13-44
+152            android:enabled="false"
+152-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:90:13-36
+153            android:exported="false" >
+153-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:91:13-37
+154            <intent-filter>
+154-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:93:13-96:29
+155                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+155-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:94:17-83
+155-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:94:25-80
+156                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+156-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:95:17-82
+156-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:95:25-79
+157            </intent-filter>
+158        </receiver>
+159        <receiver
+159-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:98:9-107:20
+160            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+160-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:99:13-103
+161            android:directBootAware="false"
+161-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:100:13-44
+162            android:enabled="false"
+162-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:101:13-36
+163            android:exported="false" >
+163-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:102:13-37
+164            <intent-filter>
+164-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:104:13-106:29
+165                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+165-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:105:17-79
+165-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:105:25-76
+166            </intent-filter>
+167        </receiver>
+168        <receiver
+168-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:108:9-119:20
+169            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+169-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:109:13-88
+170            android:directBootAware="false"
+170-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:110:13-44
+171            android:enabled="false"
+171-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:111:13-36
+172            android:exported="false" >
+172-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:112:13-37
+173            <intent-filter>
+173-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:114:13-118:29
+174                <action android:name="android.intent.action.BOOT_COMPLETED" />
+174-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:115:17-79
+174-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:115:25-76
+175                <action android:name="android.intent.action.TIME_SET" />
+175-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:116:17-73
+175-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:116:25-70
+176                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+176-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:117:17-81
+176-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:117:25-78
+177            </intent-filter>
+178        </receiver>
+179        <receiver
+179-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:120:9-129:20
+180            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+180-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:121:13-99
+181            android:directBootAware="false"
+181-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:122:13-44
+182            android:enabled="@bool/enable_system_alarm_service_default"
+182-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:123:13-72
+183            android:exported="false" >
+183-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:124:13-37
+184            <intent-filter>
+184-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:126:13-128:29
+185                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+185-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:127:17-98
+185-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:127:25-95
+186            </intent-filter>
+187        </receiver>
+188        <receiver
+188-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:130:9-140:20
+189            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+189-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:131:13-78
+190            android:directBootAware="false"
+190-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:132:13-44
+191            android:enabled="true"
+191-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:133:13-35
+192            android:exported="true"
+192-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:134:13-36
+193            android:permission="android.permission.DUMP" >
+193-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:135:13-57
+194            <intent-filter>
+194-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:137:13-139:29
+195                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+195-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:138:17-88
+195-->[androidx.work:work-runtime:2.5.0] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/AndroidManifest.xml:138:25-85
+196            </intent-filter>
+197        </receiver>
+198
+199        <service
+199-->[com.google.android.datatransport:transport-backend-cct:3.1.2] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8cdf09189fe1eaead787cb592399caba/transport-backend-cct-3.1.2/AndroidManifest.xml:29:9-35:19
+200            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+200-->[com.google.android.datatransport:transport-backend-cct:3.1.2] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8cdf09189fe1eaead787cb592399caba/transport-backend-cct-3.1.2/AndroidManifest.xml:30:13-103
+201            android:exported="false" >
+201-->[com.google.android.datatransport:transport-backend-cct:3.1.2] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8cdf09189fe1eaead787cb592399caba/transport-backend-cct-3.1.2/AndroidManifest.xml:31:13-37
+202            <meta-data
+202-->[com.google.android.datatransport:transport-backend-cct:3.1.2] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8cdf09189fe1eaead787cb592399caba/transport-backend-cct-3.1.2/AndroidManifest.xml:32:13-34:39
+203                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+203-->[com.google.android.datatransport:transport-backend-cct:3.1.2] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8cdf09189fe1eaead787cb592399caba/transport-backend-cct-3.1.2/AndroidManifest.xml:33:17-94
+204                android:value="cct" />
+204-->[com.google.android.datatransport:transport-backend-cct:3.1.2] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8cdf09189fe1eaead787cb592399caba/transport-backend-cct-3.1.2/AndroidManifest.xml:34:17-36
+205        </service>
+206        <service
+206-->[com.google.android.datatransport:transport-runtime:3.1.2] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/1e3f74bca7ba62cc0c24e1946d298191/transport-runtime-3.1.2/AndroidManifest.xml:26:9-30:19
+207            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+207-->[com.google.android.datatransport:transport-runtime:3.1.2] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/1e3f74bca7ba62cc0c24e1946d298191/transport-runtime-3.1.2/AndroidManifest.xml:27:13-117
+208            android:exported="false"
+208-->[com.google.android.datatransport:transport-runtime:3.1.2] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/1e3f74bca7ba62cc0c24e1946d298191/transport-runtime-3.1.2/AndroidManifest.xml:28:13-37
+209            android:permission="android.permission.BIND_JOB_SERVICE" >
+209-->[com.google.android.datatransport:transport-runtime:3.1.2] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/1e3f74bca7ba62cc0c24e1946d298191/transport-runtime-3.1.2/AndroidManifest.xml:29:13-69
+210        </service>
+211
+212        <receiver
+212-->[com.google.android.datatransport:transport-runtime:3.1.2] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/1e3f74bca7ba62cc0c24e1946d298191/transport-runtime-3.1.2/AndroidManifest.xml:32:9-34:40
+213            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+213-->[com.google.android.datatransport:transport-runtime:3.1.2] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/1e3f74bca7ba62cc0c24e1946d298191/transport-runtime-3.1.2/AndroidManifest.xml:33:13-132
+214            android:exported="false" />
+214-->[com.google.android.datatransport:transport-runtime:3.1.2] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/1e3f74bca7ba62cc0c24e1946d298191/transport-runtime-3.1.2/AndroidManifest.xml:34:13-37
+215
+216        <service
+216-->[androidx.room:room-runtime:2.2.5] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/c8917193864d68f8b2f3266f1a11b3f4/room-runtime-2.2.5/AndroidManifest.xml:25:9-28:40
+217            android:name="androidx.room.MultiInstanceInvalidationService"
+217-->[androidx.room:room-runtime:2.2.5] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/c8917193864d68f8b2f3266f1a11b3f4/room-runtime-2.2.5/AndroidManifest.xml:26:13-74
+218            android:directBootAware="true"
+218-->[androidx.room:room-runtime:2.2.5] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/c8917193864d68f8b2f3266f1a11b3f4/room-runtime-2.2.5/AndroidManifest.xml:27:13-43
+219            android:exported="false" />
+219-->[androidx.room:room-runtime:2.2.5] /Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/c8917193864d68f8b2f3266f1a11b3f4/room-runtime-2.2.5/AndroidManifest.xml:28:13-37
+220    </application>
+221
+222</manifest>

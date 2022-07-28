@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
@@ -57,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         val sync2TgEnabledKey = sync2TelegramKey(resources)
         val sync2TgEnabled = getBooleanVal(applicationContext, sync2TgEnabledKey)
 
-        val toggle = findViewById<SwitchCompat>(R.id.enable_telegram_sync)
+        val toggle = findViewById<Button>(R.id.enable_telegram_sync)
         val serviceIntent = Intent(
             applicationContext, SMSHandleForegroundService::class.java
         )
@@ -65,16 +66,21 @@ class MainActivity : AppCompatActivity() {
             checkPermission(Manifest.permission.RECEIVE_SMS, requestPermissionLauncher)
             startSMSService(serviceIntent)
         }
-        toggle.isChecked = sync2TgEnabled
-        toggle.setOnCheckedChangeListener { _, isChecked ->
-            runBlocking { setSync2TgEnabled(sync2TgEnabledKey, isChecked) }
-            if (isChecked) {
-                checkPermission(Manifest.permission.RECEIVE_SMS, requestPermissionLauncher)
-                startSMSService(serviceIntent)
-            } else {
-                applicationContext.stopService(serviceIntent)
-                Toast.makeText(applicationContext, "The service stopped", Toast.LENGTH_SHORT).show()
-            }
+//        toggle.isChecked = sync2TgEnabled
+//        toggle.setOnCheckedChangeListener { _, isChecked ->
+//            runBlocking { setSync2TgEnabled(sync2TgEnabledKey, isChecked) }
+//            if (isChecked) {
+//                checkPermission(Manifest.permission.RECEIVE_SMS, requestPermissionLauncher)
+//                startSMSService(serviceIntent)
+//            } else {
+//                applicationContext.stopService(serviceIntent)
+//                Toast.makeText(applicationContext, "The service stopped", Toast.LENGTH_SHORT).show()
+//            }
+//        }
+        toggle.setOnClickListener {
+            runBlocking { setSync2TgEnabled(sync2TgEnabledKey, true) }
+            checkPermission(Manifest.permission.RECEIVE_SMS, requestPermissionLauncher)
+            startSMSService(serviceIntent)
         }
     }
 
