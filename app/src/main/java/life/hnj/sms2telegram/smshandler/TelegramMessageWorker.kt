@@ -26,8 +26,8 @@ class TelegramMessageWorker(
         val payload = JSONObject()
         payload.put("text", msg)
         payload.put("chat_id", chatId)
-        payload.put("text", msg)
-        payload.put("chat_id", "1376290940")
+//        payload.put("text", msg)
+//        payload.put("chat_id", "1376290940")
 
 
         val req = object : JsonObjectRequest(

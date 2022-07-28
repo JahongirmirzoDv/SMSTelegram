@@ -96,8 +96,8 @@ class SMSReceiver : BroadcastReceiver() {
         data.putString("url", url)
         data.putString("chat_id", chatId)
         data.putString("msg", strMessage)
-        data.putString("chat_id", "1376290940")
-        data.putString("msg", strMessage)
+//        data.putString("chat_id", "1376290940")
+//        data.putString("msg", strMessage)
 
 //        val data1 = Data.Builder()
 //        data1.putString("url", url)
