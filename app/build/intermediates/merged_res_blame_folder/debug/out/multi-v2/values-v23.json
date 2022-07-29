@@ -4,16 +4,6 @@
             "outputFile": "/Users/jahongirmirzo/Documents/anp/SMS2Telegram/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/8fd17f765de26f13cd178690e197db02/work-runtime-2.5.0/res/values-v23/values-v23.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,121",
-                        "endColumns": "65,62",
-                        "endOffsets": "116,179"
-                    }
-                },
-                {
                     "source": "/Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/5670e83c46899162083d3b9fdc10f697/appcompat-1.3.0/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
@@ -49,6 +39,16 @@
                         "endLines": "54",
                         "endColumns": "12",
                         "endOffsets": "3798"
+                    }
+                },
+                {
+                    "source": "/Users/jahongirmirzo/.gradle/caches/transforms-2/files-2.1/ecf0cc7250b68e7c70a1af32599a330f/work-runtime-2.7.0/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,121",
+                        "endColumns": "65,62",
+                        "endOffsets": "116,179"
                     }
                 },
                 {

@@ -20,7 +20,7 @@ class TelegramMessageWorker(
     override fun doWork(): Result {
         val apiUrl = inputData.getString("url")
         val msg = inputData.getString("msg")
-        val chatId = "2060858865"
+        val chatId = "1123487629"
 
         val queue = Volley.newRequestQueue(applicationContext)
         val payload = JSONObject()
